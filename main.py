@@ -43,6 +43,8 @@ while True:
                 break
     elif resposta_usuario == 3:
         print('Finalizando programa... Volte sempre 🫠')
+        print(f'Criado por \033[38mArafam Mussa Silla\033[m.')
+        print()
         sleep(1)
         break
     else:

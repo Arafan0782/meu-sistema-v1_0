@@ -46,7 +46,7 @@ def inserir_dados_arquivo(meuArquivo, nome='<desconhecido>', idade=0, pais='<Sem
         print(f'\033[31mErro! Ica foi possivel adiciona dado na lista!\033[m')
     else:
         # Li no na bai adiciona que ku passado pa usuario dentro di arquivo, dps no quebra linha
-        arquivo.write(f'{nome:<15} {idade:<10} {pais:>25} \n')
+        arquivo.write(f'\n{nome:<15} {idade:<10} {pais:>25}')
         print()
         print(f'{nome} foi adicionado com sucesso 😊')
     finally:
@@ -60,8 +60,9 @@ def cabecalho_arquivo(meuArquivo):
     except (FileExistsError, FileNotFoundError):
         print(f'\033[31mErro! Ica foi possivel adiciona dado na lista!\033[m')
     else:
-        arquivo.write(f'\n{"Nome":<15} {"Idade":<10} {"Pais de Origem":>25}')
+        arquivo.write(f'{"Nome":<15} {"Idade":<10} {"Pais de Origem":>25}\n')
         arquivo.write('~' * 55)
         print()
+        
     finally:
         arquivo.close()
